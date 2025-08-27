@@ -1,0 +1,77 @@
+<h3><i class="fab fa-html5"></i> Pengenalan HTML</h3>
+<p><strong>HTML (HyperText Markup Language)</strong> bukanlah bahasa pemrograman, melainkan bahasa <em>markup</em>. Tugasnya adalah memberi tahu browser bagaimana menyusun konten sebuah halaman. Bayangkan HTML sebagai <strong>kerangka (skeleton)</strong> dari tubuh manusia; ia merupakan struktur dasarnya.</p>
+
+<h4>Anatomi Tag HTML</h4>
+<p>Elemen HTML biasanya terdiri dari <strong>tag pembuka</strong>, <strong>konten</strong>, dan <strong>tag penutup</strong>. Beberapa tag tidak memiliki tag penutup, yang disebut <em>empty tags</em> (contoh: <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;input&gt;</code>).</p>
+<pre><code>&lt;p&gt;Ini adalah konten paragraf.&lt;/p&gt;</code></pre>
+<p>Banyak tag juga memiliki <strong>atribut</strong>, yang memberikan informasi tambahan tentang elemen tersebut. Atribut selalu ada di tag pembuka.</p>
+<pre><code>&lt;a href="https://google.com"&gt;Ini link ke Google&lt;/a&gt;
+</code></pre>
+
+<h4>Struktur Dasar Dokumen</h4>
+<p>Setiap file HTML wajib memiliki struktur dasar ini untuk dianggap valid oleh browser.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;!-- Informasi untuk browser (tidak terlihat) --&gt;
+    &lt;title&gt;Judul Halaman di Tab Browser&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Semua konten yang terlihat oleh pengguna --&gt;
+    &lt;h1&gt;Judul Utama&lt;/h1&gt;
+    &lt;p&gt;Sebuah paragraf.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<ul>
+    <li><code>&lt;!DOCTYPE html&gt;</code>: Mendefinisikan bahwa dokumen ini adalah HTML5.</li>
+    <li><code>&lt;html&gt;</code>: Elemen utama yang membungkus semua konten halaman.</li>
+    <li><code>&lt;head&gt;</code>: Berisi meta-informasi seperti judul halaman, link ke file CSS, dan lainnya.</li>
+    <li><code>&lt;body&gt;</code>: Berisi semua konten yang akan ditampilkan di halaman web.</li>
+</ul>
+
+<h4>Elemen Penting: Block vs. Inline</h4>
+<p>Elemen HTML secara umum terbagi menjadi dua tipe tampilan:</p>
+<ul>
+    <li><strong>Block-level Element</strong>: Selalu dimulai di baris baru dan memakan seluruh lebar yang tersedia. Contoh: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>.</li>
+    <li><strong>Inline-level Element</strong>: Tidak dimulai di baris baru dan hanya memakan lebar sesuai kontennya. Contoh: <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;strong&gt;</code>.</li>
+</ul>
+<p><code>&lt;div&gt;</code> (block) adalah "pembungkus" generik, sedangkan <code>&lt;span&gt;</code> (inline) digunakan untuk mengelompokkan sebagian kecil teks dalam satu baris.</p>
+
+<hr class="materi-divider">
+
+<h3><i class="fab fa-css3-alt"></i> Pengenalan CSS</h3>
+<p><strong>CSS (Cascading Style Sheets)</strong> adalah bahasa yang kita gunakan untuk "menghias" kerangka HTML. Jika HTML adalah kerangka, maka CSS adalah <strong>pakaian dan gaya rambutnya</strong>. CSS mengontrol semua yang berhubungan dengan visual.</p>
+
+<h4>3 Cara Menambahkan CSS</h4>
+<ol>
+    <li><strong>External CSS (Cara Terbaik)</strong>: Menulis CSS di file terpisah (<code>.css</code>) dan menghubungkannya di dalam <code>&lt;head&gt;</code>. Ini cara paling rapi.</li>
+    <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+    <li><strong>Internal CSS</strong>: Menulis CSS di dalam tag <code>&lt;style&gt;</code> di dalam <code>&lt;head&gt;</code>.</li>
+    <li><strong>Inline CSS</strong>: Menambahkan gaya langsung ke tag HTML menggunakan atribut <code>style</code>. Sebaiknya dihindari.</li>
+</ol>
+
+<h4>Anatomi Aturan CSS</h4>
+<p>Sebuah aturan CSS terdiri dari <strong>selektor</strong> dan <strong>blok deklarasi</strong>.</p>
+
+<pre><code>/* p adalah Selektor */
+p { 
+    /* color: blue; adalah Deklarasi */
+    color: blue;      /* 'color' adalah Properti, 'blue' adalah Nilai */
+    font-size: 16px; 
+}</code></pre>
+
+<h4>Konsep Kunci: Box Model</h4>
+<p>Setiap elemen HTML dapat dianggap sebagai sebuah kotak. <strong>CSS Box Model</strong> adalah aturan yang mendefinisikan ukuran dan jarak kotak tersebut. Ini sangat penting untuk memahami tata letak.</p>
+
+<ul>
+    <li><strong>Content</strong>: Isi dari kotak (teks, gambar).</li>
+    <li><strong>Padding</strong>: Ruang transparan di <em>dalam</em> kotak, antara konten dan border.</li>
+    <li><strong>Border</strong>: Garis yang mengelilingi padding dan konten.</li>
+    <li><strong>Margin</strong>: Ruang transparan di <em>luar</em> kotak, yang mendorong elemen lain menjauh.</li>
+</ul>
+<pre><code>.kotak-spesial {
+    width: 200px;
+    padding: 20px; /* Jarak di dalam 20px */
+    border: 2px solid black; /* Garis batas 2px */
+    margin: 30px; /* Jarak di luar 30px */
+}</code></pre>

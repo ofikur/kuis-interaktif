@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Pemrograman Dasar - HTML & CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materi.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div id="main-content-wrapper">
+        <div class="container" id="start-screen">
+            <h1><i class="fas fa-laptop-code"></i> Selamat Datang!</h1>
+            <p>Uji pengetahuanmu tentang dasar-dasar HTML & CSS.</p>
+            <div class="start-screen-buttons">
+                <button id="show-materi-button" class="btn-secondary"><i class="fas fa-book-open"></i> Lihat Materi</button>
+                <button id="start-button">Mulai Kuis <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>Tentang Kuis Interaktif Ini</h2>
+            <p>
+                Selamat datang di kuis interaktif pemrograman dasar! Website ini dirancang sebagai platform sederhana untuk menguji dan meningkatkan kembali pemahamanmu mengenai dasar-dasar HTML & CSS.
+            </p>
+            <p>
+                Nikmati berbagai fitur seperti materi pembelajaran, batas waktu <strong>30 detik</strong> per soal, dan ulasan jawaban di akhir kuis untuk membantumu belajar dari kesalahan.
+            </p>
+            <p>
+                <strong>Siap menguji kemampuanmu? Klik 'Mulai Kuis' dan buktikan keahlianmu!</strong>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="container" id="quiz-container" style="display: none;">
+        <div class="progress-bar-container"><div class="progress-bar" id="progress-bar"></div></div>
+        <div class="quiz-header">
+            <h2 id="question">Pertanyaan akan muncul di sini</h2>
+            <div class="quiz-meta">
+                <div id="progress">Pertanyaan 1 dari 10</div>
+                <div id="timer"><i class="fas fa-clock"></i> Sisa Waktu: <span id="time-left">30</span>s</div>
+            </div>
+        </div>
+        <div class="options" id="options"></div>
+        <div class="quiz-footer">
+            <button id="prev-button" hidden><i class="fas fa-arrow-left"></i> Sebelumnya</button>
+            <button id="next-button">Selanjutnya <i class="fas fa-arrow-right"></i></button>
+            <button id="submit-button" class="submit-btn" style="display: none;">Kirim Jawaban <i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div class="container" id="score-screen" style="display: none;">
+        <h2><i class="fas fa-trophy"></i> Kuis Selesai!</h2>
+        <p>Skor Akhir Kamu:</p>
+        <h1 id="score">0</h1>
+        <p>Kamu menjawab <span id="correct-answers">0</span> dari <span id="total-questions">10</span> pertanyaan dengan benar.</p>
+        <hr>
+        <h3>Koreksi Jawaban</h3>
+        <div id="review-container"></div>
+        <div class="score-footer-buttons">
+            <button id="back-button" class="btn-secondary"><i class="fas fa-home"></i> Kembali</button>
+            <button id="restart-button"><i class="fas fa-redo"></i> Coba Lagi</button>
+        </div>
+    </div>
+
+    <div id="materi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2><i class="fas fa-book"></i> Materi Dasar HTML & CSS</h2>
+            <div class="materi-body"></div>
+        </div>
+    </div>
+    
+    <script src="js/dataQuiz.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/materi.js"></script>
+</body>
+</html>
