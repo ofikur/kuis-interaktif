@@ -22,6 +22,8 @@ const backButton = document.getElementById('back-button');
 const timeLeftElement = document.getElementById('time-left');
 const timerElement = document.getElementById('timer');
 
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 // --- Variabel Status Kuis ---
 let currentQuestionIndex = 0;
 let userAnswers = new Array(quizData.length).fill(null);
