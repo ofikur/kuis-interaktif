@@ -4,12 +4,10 @@ Selamat datang di **Kuis Interaktif HTML & CSS**, sebuah aplikasi web sederhana 
 
 Sangat cocok bagi pemula yang ingin mengukur sejauh mana pengetahuan mereka atau bagi siapa saja yang ingin menyegarkan kembali ingatan tentang konsep-konsep fundamental dalam pengembangan web front-end.
 
-#### Tampilan Halaman Awal & Materi
-![Tampilan Halaman Awal & Materi](https://i.ibb.co/6y4G1vX/Screenshot-2024-03-24-124119.png)
-#### Tampilan Kuis Berlangsung
-![Tampilan Kuis Berlangsung](https://i.ibb.co/hKzpmCY/Screenshot-2024-03-24-124159.png)
+#### Tampilan Halaman Awal
+![Tampilan Halaman Awal & Materi](screenshot/halaman-depan.png)
 #### Tampilan Skor Akhir & Koreksi
-![Tampilan Skor Akhir & Koreksi](https://i.ibb.co/51bJqFf/Screenshot-2024-03-24-124239.png)
+![Tampilan Skor Akhir & Koreksi](screenshot/halaman-skor.png)
 
 
 ## ✨ Fitur-fitur
